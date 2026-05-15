@@ -1,0 +1,89 @@
+/* ═══════════════════════════════════════════════
+   RESPONSIVE.CSS — Mobile & Tablet Breakpoints
+   ═══════════════════════════════════════════════ */
+
+/* ── Tablet: ≤ 1024px ── */
+@media (max-width: 1024px) {
+  .hero-visual {
+    width: min(340px, 38vw);
+  }
+}
+
+/* ── Tablet/Mobile: ≤ 900px ── */
+@media (max-width: 900px) {
+  /* Hide hero terminals on smaller screens */
+  .hero-visual { display: none; }
+
+  /* Stack about grid */
+  .about-grid { grid-template-columns: 1fr; }
+
+  /* Stack contact grid */
+  .contact-grid { grid-template-columns: 1fr; }
+
+  /* Hide desktop nav links */
+  .nav-links { display: none; }
+
+  /* Show hamburger */
+  .hamburger { display: flex; }
+
+  /* Hide resume button in nav on mobile */
+  .nav-right .btn-outline { display: none; }
+
+  /* Reduce section padding */
+  section { padding: 5rem 1.5rem; }
+
+  #hero { padding: 0 1.5rem; }
+
+  nav { padding: 1rem 1.5rem; }
+
+  /* Stack experience card */
+  .exp-card {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-duration {
+    order: -1; /* show duration first on mobile */
+  }
+}
+
+/* ── Mobile: ≤ 600px ── */
+@media (max-width: 600px) {
+  /* Projects: single column */
+  .projects-grid { grid-template-columns: 1fr; }
+
+  /* Stats: 2 columns stays fine */
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+
+  /* Certs: single column */
+  .certs-grid { grid-template-columns: 1fr; }
+
+  /* Skills grid: tighter */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  /* Hero text adjustments */
+  .hero-tagline { font-size: 0.9rem; }
+
+  /* Hero CTA: stack */
+  .hero-cta { flex-direction: column; }
+
+  .btn-primary,
+  .btn-outline {
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Footer links: wrap */
+  .footer-links {
+    flex-wrap: wrap;
+    gap:       1rem;
+  }
+}
+
+/* ── Very small screens: ≤ 380px ── */
+@media (max-width: 380px) {
+  .hero-name { font-size: 2.6rem; }
+  .section-title { font-size: 1.8rem; }
+  section { padding: 4rem 1rem; }
+}

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kaif Farooqui — DevOps Engineer specializing in AWS, Kubernetes, Docker, Terraform, and CI/CD pipelines." />
+  <meta name="keywords" content="DevOps Engineer, AWS, Kubernetes, Docker, Terraform, Jenkins, CI/CD, Cloud Infrastructure" />
+  <meta name="author" content="Kaif Farooqui" />
+  <title>Kaif Farooqui — DevOps Engineer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--               LOADING SCREEN           -->
+  <!-- ═══════════════════════════════════════ -->
+  <div id="loader" role="status" aria-label="Loading portfolio">
+    <div class="loader-logo">KF.devops</div>
+    <div class="loader-bar">
+      <div class="loader-fill"></div>
+    </div>
+    <div class="loader-text">INITIALIZING_PIPELINE...</div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="progress" role="progressbar" aria-label="Scroll progress"></div>
+
+  <!-- Cursor Glow -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Particles Canvas -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                NAVBAR                  -->
+  <!-- ═══════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-logo">KF/</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certifications">Certs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="assets/resume.pdf" class="btn-outline" download>↓ Resume</a>
+      <div class="hamburger" id="hamburger" aria-label="Open menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#about"          class="mobile-link">About</a>
+    <a href="#skills"         class="mobile-link">Skills</a>
+    <a href="#projects"       class="mobile-link">Projects</a>
+    <a href="#experience"     class="mobile-link">Experience</a>
+    <a href="#certifications" class="mobile-link">Certs</a>
+    <a href="#contact"        class="mobile-link">Contact</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--               HERO SECTION             -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="hero" aria-label="Hero section">
+    <div class="hero-bg"   aria-hidden="true"></div>
+    <div class="grid-bg"   aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span>Available for opportunities</span>
+      </div>
+
+      <h1 class="hero-name">
+        <span class="first">Kaif</span>
+        <span class="last">Farooqui</span>
+      </h1>
+
+      <div class="typing-line" aria-live="polite">
+        <span id="typed-text"></span><span class="cursor" aria-hidden="true">█</span>
+      </div>
+
+      <p class="hero-tagline">
+        Automating Infrastructure &nbsp;·&nbsp; Scaling Cloud Systems &nbsp;·&nbsp; Building CI/CD Pipelines
+      </p>
+
+      <div class="hero-cta">
+        <a href="assets/resume.pdf" class="btn-primary" download>↓&nbsp; View Resume</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://github.com/kaif-farooqui" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+          <!-- GitHub SVG -->
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57
+            0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695
+            -.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99
+            .105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225
+            -.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405
+            c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225
+            0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3
+            0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/kaif-farooqui" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445
+            -2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267
+            2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063
+            2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542
+            C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+        <a href="mailto:kaif.farooqui@email.com" class="social-link" aria-label="Email">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </a>
+      </div>
+    </div><!-- /.hero-content -->
+
+    <!-- Floating Terminal Windows -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+        </div>
+        <div class="term-line"><span class="h">$</span> docker build -t app:latest .</div>
+        <div class="term-line"><span class="c">→ Step 1/8 : FROM node:18-alpine</span></div>
+        <div class="term-line"><span class="c">→ Step 8/8 : CMD ["node","index.js"]</span></div>
+        <div class="term-line"><span class="p">✓ Successfully built 3a4f9b2c</span></div>
+      </div>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+        </div>
+        <div class="term-line"><span class="h">$</span> terraform apply -auto-approve</div>
+        <div class="term-line"><span class="c">→ aws_vpc.main: Creating...</span></div>
+        <div class="term-line"><span class="c">→ aws_ecs_cluster.app: Creating...</span></div>
+        <div class="term-line" style="color:#10b981">Apply complete! 12 added.</div>
+      </div>
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+        </div>
+        <div class="term-line"><span class="h">$</span> kubectl get pods -n production</div>
+        <div class="term-line"><span class="p">app-6d9f8b   3/3   Running   0   2d</span></div>
+        <div class="term-line"><span class="p">api-7c4a1b   2/2   Running   0   2d</span></div>
+      </div>
+    </div><!-- /.hero-visual -->
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--              ABOUT SECTION             -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="about" aria-label="About section">
+    <div class="reveal">
+      <div class="section-label">// 01 — about</div>
+      <h2 class="section-title">The Engineer <span>Behind the Stack</span></h2>
+    </div>
+
+    <div class="about-grid reveal">
+      <!-- Left: Bio + Timeline -->
+      <div>
+        <p class="about-text" style="margin-bottom:1.5rem">
+          I'm a passionate <strong class="highlight">DevOps Engineer</strong> specializing in cloud infrastructure
+          automation, CI/CD pipeline design, and containerized application deployments.
+          I bridge the gap between development and operations — shipping faster, scaling smarter.
+        </p>
+        <p class="about-text">
+          With hands-on experience in <strong class="highlight">AWS, Kubernetes, Terraform, and Jenkins</strong>,
+          I architect resilient, cost-efficient infrastructure that powers modern applications.
+          I believe in Infrastructure as Code, continuous improvement, and zero-downtime deployments.
+        </p>
+
+        <div class="timeline" style="margin-top:2.5rem">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-date">2024 — Present</div>
+              <div class="tl-role">DevOps Engineer</div>
+              <div class="tl-company">Tech Company · Hyderabad, India</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-date">2023 — 2024</div>
+              <div class="tl-role">Junior DevOps Engineer</div>
+              <div class="tl-company">Startup · Remote</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-date">2019 — 2023</div>
+              <div class="tl-role">B.Tech Computer Science</div>
+              <div class="tl-company">University · India</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Stats Cards -->
+      <div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-num" id="stat1">0</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="stat2">0</div>
+            <div class="stat-label">AWS Services Used</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="stat3">0</div>
+            <div class="stat-label">CI/CD Pipelines Built</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="stat4">0</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.about-grid -->
+  </section>
+
+  <div class="glow-line"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--              SKILLS SECTION            -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="skills" aria-label="Skills section">
+    <div class="reveal">
+      <div class="section-label">// 02 — skills</div>
+      <h2 class="section-title">Tech <span>Arsenal</span></h2>
+    </div>
+
+    <div class="skills-categories reveal" role="group" aria-label="Filter skills by category">
+      <button class="cat-btn active" data-cat="all">All</button>
+      <button class="cat-btn" data-cat="cloud">Cloud</button>
+      <button class="cat-btn" data-cat="cicd">CI/CD</button>
+      <button class="cat-btn" data-cat="containers">Containers</button>
+      <button class="cat-btn" data-cat="iac">IaC</button>
+      <button class="cat-btn" data-cat="vcs">Version Control</button>
+      <button class="cat-btn" data-cat="monitoring">Monitoring</button>
+    </div>
+
+    <div class="skills-grid reveal" id="skillsGrid" role="list"></div>
+  </section>
+
+  <div class="glow-line"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--             PROJECTS SECTION           -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="projects" aria-label="Projects section">
+    <div class="reveal">
+      <div class="section-label">// 03 — projects</div>
+      <h2 class="section-title">Featured <span>Work</span></h2>
+    </div>
+
+    <div class="projects-grid reveal">
+
+      <!-- Project 1 -->
+      <article class="project-card">
+        <div class="project-banner proj-b1">
+          <div class="banner-icons">
+            <span class="banner-badge bb-cyan">GitHub</span>
+            <span class="banner-badge bb-purple">Docker</span>
+            <span class="banner-badge bb-cyan">ECR</span>
+            <span class="banner-badge bb-green">ECS</span>
+            <span class="banner-badge bb-cyan">CloudWatch</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Automated Node.js Deployment on AWS ECS</h3>
+          <p class="project-desc">
+            End-to-end automated deployment pipeline for Node.js applications.
+            Docker images pushed to ECR, deployed to ECS with health checks and CloudWatch monitoring.
+          </p>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">↗ Live Demo</a>
+            <a href="https://github.com/kaif-farooqui" target="_blank" rel="noopener">⌥ GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card">
+        <div class="project-banner proj-b2">
+          <div class="banner-icons">
+            <span class="banner-badge bb-green">Jenkins</span>
+            <span class="banner-badge bb-cyan">QA Pipeline</span>
+            <span class="banner-badge bb-purple">UAT</span>
+            <span class="banner-badge bb-green">Automation</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Jenkins QA → UAT Deployment Automation</h3>
+          <p class="project-desc">
+            Sequential deployment workflow automating QA to UAT environment promotion
+            with integrated testing gates, approval stages, and rollback mechanisms.
+          </p>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">↗ Live Demo</a>
+            <a href="https://github.com/kaif-farooqui" target="_blank" rel="noopener">⌥ GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card">
+        <div class="project-banner proj-b3">
+          <div class="banner-icons">
+            <span class="banner-badge bb-purple">Terraform</span>
+            <span class="banner-badge bb-cyan">AWS VPC</span>
+            <span class="banner-badge bb-green">EC2</span>
+            <span class="banner-badge bb-purple">IAM</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">Terraform AWS Infrastructure Provisioning</h3>
+          <p class="project-desc">
+            Modular Terraform configuration provisioning complete AWS environments —
+            VPC, subnets, EC2 instances, security groups, and IAM roles from scratch.
+          </p>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">↗ Live Demo</a>
+            <a href="https://github.com/kaif-farooqui" target="_blank" rel="noopener">⌥ GitHub</a>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /.projects-grid -->
+  </section>
+
+  <div class="glow-line"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--           EXPERIENCE SECTION           -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="experience" aria-label="Experience section">
+    <div class="reveal">
+      <div class="section-label">// 04 — experience</div>
+      <h2 class="section-title">Career <span>Journey</span></h2>
+    </div>
+
+    <div class="exp-list reveal">
+
+      <div class="exp-card">
+        <div>
+          <div class="exp-role">DevOps Engineer</div>
+          <div class="exp-company">TechCorp Solutions</div>
+          <p class="exp-desc">
+            Designed and maintained CI/CD pipelines using Jenkins and GitHub Actions,
+            reducing deployment time by 60%. Migrated legacy infrastructure to AWS ECS
+            with Docker containers, provisioned cloud resources using Terraform, and
+            implemented comprehensive CloudWatch monitoring dashboards.
+          </p>
+          <div class="exp-tags">
+            <span class="tag">AWS ECS</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Terraform</span>
+            <span class="tag">Jenkins</span>
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">CloudWatch</span>
+          </div>
+        </div>
+        <div class="exp-duration">Jan 2024 — Present</div>
+      </div>
+
+      <div class="exp-card">
+        <div>
+          <div class="exp-role">Junior DevOps Engineer</div>
+          <div class="exp-company">StartupXYZ</div>
+          <p class="exp-desc">
+            Built automated deployment pipelines for microservices architecture.
+            Containerized applications with Docker, managed Kubernetes clusters, and
+            implemented Infrastructure as Code using Terraform. Maintained Linux servers
+            and wrote Bash automation scripts.
+          </p>
+          <div class="exp-tags">
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Bash</span>
+            <span class="tag">Terraform</span>
+            <span class="tag">Bitbucket</span>
+          </div>
+        </div>
+        <div class="exp-duration">Jun 2023 — Dec 2023</div>
+      </div>
+
+    </div><!-- /.exp-list -->
+
+    <div style="margin-top:2.5rem;text-align:center">
+      <a href="assets/resume.pdf" class="btn-primary" download>↓ Download Full Resume</a>
+    </div>
+  </section>
+
+  <div class="glow-line"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--         CERTIFICATIONS SECTION         -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="certifications" aria-label="Certifications section">
+    <div class="reveal">
+      <div class="section-label">// 05 — certifications</div>
+      <h2 class="section-title">Credentials &amp; <span>Badges</span></h2>
+    </div>
+
+    <div class="certs-grid reveal">
+      <div class="cert-card">
+        <div class="cert-badge">☁️</div>
+        <div class="cert-name">AWS Cloud Practitioner</div>
+        <div class="cert-issuer">Amazon Web Services</div>
+        <div class="cert-year">2024</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">⚙️</div>
+        <div class="cert-name">DevOps Engineer Certification</div>
+        <div class="cert-issuer">Industry Recognized</div>
+        <div class="cert-year">2023</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">🐧</div>
+        <div class="cert-name">Linux Administration</div>
+        <div class="cert-issuer">Linux Foundation</div>
+        <div class="cert-year">2023</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--             CONTACT SECTION            -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="contact" aria-label="Contact section">
+    <div class="reveal">
+      <div class="section-label">// 06 — contact</div>
+      <h2 class="section-title">Let's <span>Connect</span></h2>
+    </div>
+
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:1rem">
+          Open to DevOps, Cloud Engineering, and SRE roles. Let's build something great together.
+        </p>
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <a href="mailto:kaif.farooqui@email.com">kaif.farooqui@email.com</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💼</div>
+          <a href="https://linkedin.com/in/kaif-farooqui" target="_blank" rel="noopener">linkedin.com/in/kaif-farooqui</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">⌨️</div>
+          <a href="https://github.com/kaif-farooqui" target="_blank" rel="noopener">github.com/kaif-farooqui</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <span>Hyderabad, India · Open to Remote</span>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="john@company.com" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center">
+          ↗ Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                 FOOTER                 -->
+  <!-- ═══════════════════════════════════════ -->
+  <footer>
+    <div class="footer-logo">KF.devops</div>
+    <ul class="footer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="footer-socials">
+      <a href="https://github.com/kaif-farooqui" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57
+          0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695
+          -.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99
+          .105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225
+          -.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405
+          c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225
+          0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3
+          0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+      </a>
+      <a href="https://linkedin.com/in/kaif-farooqui" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445
+          -2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267
+          2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063
+          2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542
+          C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
+    </div>
+    <p class="footer-copy">Built with React &amp; Passion &nbsp;·&nbsp; © 2025 Kaif Farooqui</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/particles.js"></script>
+  <script src="js/typing.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
