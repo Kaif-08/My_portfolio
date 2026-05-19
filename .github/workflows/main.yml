@@ -21,8 +21,4 @@ jobs:
           aws-region: eu-north-1
 
       - name: Deploy to S3
-        run: |
-          aws s3 sync . s3://portfolio-kaif --delete \
-          --exclude ".git/*" \
-          --exclude ".github/*" \
-          --exclude "README.md"
+        run:  aws s3 sync kaif-portfolio/ s3://portfolio-kaif --delete
