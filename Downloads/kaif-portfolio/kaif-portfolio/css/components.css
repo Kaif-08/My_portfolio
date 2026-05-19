@@ -1,0 +1,86 @@
+/* ═══════════════════════════════════════════════
+   COMPONENTS.CSS — Buttons, Social Links,
+   and other reusable UI components
+   ═══════════════════════════════════════════════ */
+
+/* ────────────────────────────────────────
+   BUTTONS
+   ──────────────────────────────────────── */
+
+/* Primary filled button */
+.btn-primary {
+  background:     linear-gradient(135deg, var(--c2), var(--c3));
+  color:          #fff;
+  padding:        0.85rem 2rem;
+  border-radius:  6px;
+  font-family:    var(--ff-sans);
+  font-weight:    700;
+  font-size:      0.9rem;
+  border:         none;
+  cursor:         pointer;
+  text-decoration: none;
+  transition:     all var(--transition);
+  position:       relative;
+  overflow:       hidden;
+  display:        inline-flex;
+  align-items:    center;
+  gap:            0.5rem;
+  box-shadow:     0 0 30px rgba(124, 58, 237, 0.3);
+}
+
+.btn-primary:hover {
+  transform:  translateY(-2px);
+  box-shadow: 0 0 50px rgba(124, 58, 237, 0.5);
+}
+
+.btn-primary:active {
+  transform:  translateY(0);
+}
+
+/* Outline / ghost button */
+.btn-outline {
+  font-family:     var(--ff-mono);
+  border:          1px solid var(--c1);
+  color:           var(--c1);
+  padding:         0.5rem 1.25rem;
+  border-radius:   4px;
+  font-size:       0.75rem;
+  letter-spacing:  0.1em;
+  cursor:          pointer;
+  background:      transparent;
+  transition:      all var(--transition);
+  text-decoration: none;
+  text-transform:  uppercase;
+  display:         inline-flex;
+  align-items:     center;
+  gap:             0.5rem;
+}
+
+.btn-outline:hover {
+  background:  rgba(0, 245, 255, 0.08);
+  box-shadow:  0 0 20px rgba(0, 245, 255, 0.2);
+}
+
+/* ────────────────────────────────────────
+   SOCIAL LINK ICONS
+   ──────────────────────────────────────── */
+.social-link {
+  width:           42px;
+  height:          42px;
+  border-radius:   8px;
+  border:          1px solid var(--border);
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  color:           var(--muted);
+  text-decoration: none;
+  transition:      all var(--transition);
+  background:      rgba(0, 245, 255, 0.03);
+}
+
+.social-link:hover {
+  border-color: var(--c1);
+  color:        var(--c1);
+  box-shadow:   0 0 15px rgba(0, 245, 255, 0.2);
+  transform:    translateY(-2px);
+}

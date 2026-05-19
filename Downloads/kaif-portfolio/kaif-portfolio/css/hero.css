@@ -1,0 +1,197 @@
+/* ═══════════════════════════════════════════════
+   HERO.CSS — Hero Section Styles
+   ═══════════════════════════════════════════════ */
+
+#hero {
+  position:   relative;
+  min-height: 100vh;
+  display:    flex;
+  align-items: center;
+  padding:    0 2.5rem;
+  max-width:  none;
+  overflow:   hidden;
+}
+
+/* ── Gradient Background Blobs ── */
+.hero-bg {
+  position: absolute;
+  inset:    0;
+  background:
+    radial-gradient(ellipse 80% 60% at 60% 50%, rgba(124, 58, 237, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 20% 30%, rgba(0, 245, 255, 0.06)  0%, transparent 50%);
+  z-index: 0;
+}
+
+/* ── Animated Grid ── */
+.grid-bg {
+  position: absolute;
+  inset:    0;
+  background-image:
+    linear-gradient(rgba(0, 245, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 245, 255, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation:       gridMove 20s linear infinite;
+  z-index: 0;
+}
+
+/* ── Hero Text Content ── */
+.hero-content {
+  position:   relative;
+  z-index:    2;
+  max-width:  800px;
+  padding-top: 5rem;
+}
+
+/* ── Available Badge ── */
+.hero-tag {
+  display:        inline-flex;
+  align-items:    center;
+  gap:            0.5rem;
+  border:         1px solid var(--border);
+  border-radius:  100px;
+  padding:        0.35rem 1rem;
+  font-family:    var(--ff-mono);
+  font-size:      0.7rem;
+  color:          var(--c1);
+  letter-spacing: 0.15em;
+  margin-bottom:  1.5rem;
+  background:     rgba(0, 245, 255, 0.04);
+}
+
+.hero-tag::before {
+  content:       '';
+  width:         6px;
+  height:        6px;
+  border-radius: 50%;
+  background:    var(--c4);
+  animation:     pulse 2s ease infinite;
+  flex-shrink:   0;
+}
+
+/* ── Name ── */
+.hero-name {
+  font-size:   clamp(3rem, 8vw, 6.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  margin-bottom: 1rem;
+  display:     flex;
+  flex-direction: column;
+}
+
+.hero-name .first {
+  color: var(--text);
+}
+
+.hero-name .last {
+  background:             linear-gradient(135deg, var(--c1) 0%, var(--c3) 50%, var(--c2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip:         text;
+}
+
+/* ── Typing Animation Line ── */
+.typing-line {
+  font-family:  var(--ff-mono);
+  font-size:    clamp(1rem, 2.5vw, 1.4rem);
+  color:        var(--c1);
+  margin-bottom: 1.5rem;
+  min-height:   2rem;
+}
+
+.cursor {
+  animation: blink 0.7s step-end infinite;
+  color:     var(--c2);
+}
+
+/* ── Tagline ── */
+.hero-tagline {
+  color:        var(--muted);
+  font-size:    1.05rem;
+  margin-bottom: 2.5rem;
+  line-height:  1.8;
+  max-width:    500px;
+}
+
+/* ── CTA Buttons Row ── */
+.hero-cta {
+  display:   flex;
+  gap:       1rem;
+  flex-wrap: wrap;
+}
+
+/* ── Social Icons ── */
+.hero-socials {
+  display:    flex;
+  gap:        1.25rem;
+  margin-top: 3rem;
+}
+
+/* ── Floating Terminal Windows ── */
+.hero-visual {
+  position:       absolute;
+  right:          5%;
+  top:            50%;
+  transform:      translateY(-50%);
+  width:          min(420px, 40vw);
+  display:        flex;
+  flex-direction: column;
+  gap:            1rem;
+  z-index:        2;
+}
+
+.terminal {
+  background:      rgba(8, 15, 30, 0.9);
+  border:          1px solid var(--border);
+  border-radius:   10px;
+  padding:         1rem 1.25rem;
+  backdrop-filter: blur(10px);
+  font-family:     var(--ff-mono);
+  font-size:       0.7rem;
+}
+
+.terminal:nth-child(1) { animation: float 6s ease-in-out infinite; }
+.terminal:nth-child(2) { animation: float 6s ease-in-out -2s infinite; }
+.terminal:nth-child(3) { animation: float 6s ease-in-out -4s infinite; }
+
+.terminal-bar {
+  display:       flex;
+  gap:           5px;
+  margin-bottom: 0.75rem;
+}
+
+.dot {
+  width:         10px;
+  height:        10px;
+  border-radius: 50%;
+}
+.dot.r { background: #ff5f56; }
+.dot.y { background: #ffbd2e; }
+.dot.g { background: #27c93f; }
+
+.term-line         { margin-bottom: 3px; }
+.term-line .h      { color: var(--c1); }
+.term-line .c      { color: var(--muted); }
+.term-line .p      { color: var(--c2); }
+
+/* ── Scroll Indicator ── */
+.scroll-indicator {
+  position:       absolute;
+  bottom:         2.5rem;
+  left:           50%;
+  transform:      translateX(-50%);
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  gap:            0.5rem;
+  color:          var(--muted);
+  font-size:      0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  animation:      bounce 2s ease infinite;
+}
+
+.scroll-arrow {
+  width:      1px;
+  height:     40px;
+  background: linear-gradient(to bottom, var(--c1), transparent);
+}

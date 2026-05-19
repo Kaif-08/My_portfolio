@@ -1,0 +1,138 @@
+/* ═══════════════════════════════════════════════
+   NAVBAR.CSS — Navigation Bar + Mobile Menu
+   ═══════════════════════════════════════════════ */
+
+nav {
+  position:        fixed;
+  top:             0;
+  left:            0;
+  right:           0;
+  z-index:         500;
+  padding:         1rem 2.5rem;
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  transition:      background var(--transition), border-color var(--transition),
+                   backdrop-filter var(--transition);
+}
+
+nav.scrolled {
+  background:      rgba(5, 11, 21, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom:   1px solid var(--border);
+}
+
+/* ── Logo ── */
+.nav-logo {
+  font-family:    var(--ff-mono);
+  color:          var(--c1);
+  font-size:      1rem;
+  letter-spacing: 0.1em;
+  cursor:         pointer;
+}
+
+/* ── Desktop Links ── */
+.nav-links {
+  display:    flex;
+  gap:        2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color:          var(--muted);
+  font-size:      0.85rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:     color var(--transition);
+  position:       relative;
+}
+
+.nav-links a::after {
+  content:          '';
+  position:         absolute;
+  bottom:           -4px;
+  left:             0;
+  width:            0;
+  height:           1px;
+  background:       var(--c1);
+  transition:       width var(--transition);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--c1);
+}
+
+/* ── Right Side (Resume button + hamburger) ── */
+.nav-right {
+  display:     flex;
+  gap:         1rem;
+  align-items: center;
+}
+
+/* ── Hamburger ── */
+.hamburger {
+  display:        none;
+  flex-direction: column;
+  gap:            5px;
+  cursor:         pointer;
+  padding:        4px;
+}
+
+.hamburger span {
+  width:      22px;
+  height:     1.5px;
+  background: var(--c1);
+  transition: all 0.3s ease;
+  display:    block;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform:        rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity:   0;
+  transform: translateX(-8px);
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ── Mobile Menu Overlay ── */
+.mobile-menu {
+  display:         none;
+  position:        fixed;
+  inset:           0;
+  z-index:         400;
+  background:      rgba(5, 11, 21, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  flex-direction:  column;
+  align-items:     center;
+  justify-content: center;
+  gap:             2.5rem;
+}
+
+.mobile-menu.open {
+  display:    flex;
+}
+
+.mobile-menu a {
+  color:          var(--text);
+  font-size:      1.5rem;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition:     color var(--transition);
+}
+
+.mobile-menu a:hover {
+  color: var(--c1);
+}
